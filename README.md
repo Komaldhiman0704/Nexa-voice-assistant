@@ -43,13 +43,10 @@ This project demonstrates practical applications of voice control, API integrati
 ## Project Structure
 
 Nexa/
-├── main.py # Main control script
-├── musicLibrary.py # Dictionary of song names and YouTube URLs
-├── client.py # (Optional) OpenAI interaction module
-├── README.md # Project documentation
-├── requirements.txt # Python dependencies
-└── venv/ # Python virtual environment (excluded in GitHub)
+── main.py # Main control script
+── musicLibrary.py # Dictionary of song names and YouTube URLs
+── client.py # (Optional) OpenAI interaction module
+── README.md # Project documentation
+── requirements.txt # Python dependencies
+── venv/ # Python virtual environment (excluded in GitHub)
 
-yaml
-Copy
-Edit
