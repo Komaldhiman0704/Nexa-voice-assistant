@@ -5,7 +5,7 @@ import requests
 from gtts import gTTS
 import pygame
 import os
-import musicLibrary  
+
 # ------------ API KEY SETUP --------------
 # Register at newsapi.org for your own free key (current key works for demos)
 NEWSAPI_KEY = "0b63ad04cd9c4bd6a6fbe897fc37836a"
@@ -16,7 +16,7 @@ engine = pyttsx3.init()
 
 def speak(text, slow=False):
     """Convert text to speech and play it."""
-    print("Jarvis:", text)
+    print("Nexa:", text)
     tts = gTTS(text, lang='en', slow=slow)
     tts.save('temp.mp3')
     pygame.mixer.init()
@@ -81,7 +81,7 @@ def processCommand(c):
     else:
         google_search(c)
 
-def listen_for_wake_word(r, wake_word="jarvis"):
+def listen_for_wake_word(r, wake_word="nexa"):
     """Continuously listen for the wake word."""
     with sr.Microphone() as source:
         print("Listening for wake word...")
@@ -102,13 +102,13 @@ def listen_for_wake_word(r, wake_word="jarvis"):
                 continue
 
 if __name__ == "__main__":
-    speak("Initializing Jarvis....")
+    speak("Initializing Nexa....")
     r = sr.Recognizer()
     while True:
-        listen_for_wake_word(r)
+        listen_for_wake_word(r, wake_word="nexa")
         speak("Yes?")
         with sr.Microphone() as source:
-            print("Jarvis Active...")
+            print("Nexa Active...")
             audio = r.listen(source, timeout=5, phrase_time_limit=5)
             try:
                 command = r.recognize_google(audio)
